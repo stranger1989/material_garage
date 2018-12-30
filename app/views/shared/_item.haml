@@ -1,0 +1,5 @@
+.itemList__element.element{ data: {id: "#{item.id}"}}
+  .element__itemImage{style: "background-image: url('#{ item.image_url.url}') "}
+  .element__itemName=item.name
+  .element__itemStorage=item.storage
+  =link_to "",item_path(item.id), class: "element__itemLink"
