@@ -1,0 +1,26 @@
+.header{
+  width: 100%;
+  height: $header-height;
+  background-color:$palette-gray-primary;
+  line-height: $header-height;
+}
+
+.logo{
+  width:100px;
+  height:$header-height;
+  float:left;
+  background-color:$palette-gray-secondary;
+}
+
+.serchBox{
+  float:left;
+}
+
+.nemu{
+  float:right;
+  &__action{
+    padding:0 5px;
+    float:right;
+    display: inline-block;
+  }
+}
