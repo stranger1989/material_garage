@@ -1,0 +1,38 @@
+.wrapper
+  %header.header
+    .logo
+    .serchBox
+      %label{name:"title", placeholder:"検索"}
+      %input{name:"title", placeholder:"検索"}
+    .nemu
+      -if user_signed_in?
+        .nemu__action アイテム追加
+        .nemu__action ユーザー情報
+        .nemu__action
+          =link_to 'ログアウト', destroy_user_session_path, method: :delete
+  .contents
+    .itemList
+      .itemList__element.element
+        .element__itemImage
+        .element__itemName itemname
+        .element__itemStorage storage
+        =link_to "","https://www.google.com", class: "element__itemLink"
+      .itemList__element.element
+        .element__itemImage
+        .element__itemName itemname
+        .element__itemStorage storage
+        =link_to "","https://www.google.com", class: "element__itemLink"
+      .itemList__element.element
+        .element__itemImage
+        .element__itemName itemname
+        .element__itemStorage storage
+        =link_to "","https://www.google.com", class: "element__itemLink"
+      .itemList__element.element
+        .element__itemImage
+        .element__itemName itemname
+        .element__itemStorage storage
+        =link_to "","https://www.google.com", class: "element__itemLink"
+
+  %footer.footer
+    © 2018 Material Garage ALL RIGHTS RESERVED.
+
