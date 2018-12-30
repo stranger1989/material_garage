@@ -1,0 +1,46 @@
+// レイアウト関連設定
+// マージンは左または上に統一
+
+// 全体
+$main-width:90%;
+
+// ヘッダー
+$header-height:50px;
+
+// コンテンツ
+$content-width:90%;
+
+// フッター
+$footer-height:30px;
+
+// フォント関連設定
+
+$font-size-1:2rem;
+$font-size-2:1.8rem;
+$font-size-3:1.6rem;
+$font-size-4:1.4rem;
+$font-size-5:1.2rem;
+$font-size-6:1rem;
+$font-size-7:0.8rem;
+$font-size-8:0.6rem;
+$font-size-9:0.4rem;
+$font-size-9:0.2rem;
+
+// 配色関連設定
+$palette-black-primary:#000;
+// $palette-black-secondary:#000;
+// $palette-red-third
+// $palette-red-tertiary
+// $palette-red-quaternary
+$palette-blue-primary:blue;
+$palette-yellow-primary:yellow;
+
+$palette-white-primary:#FFF;
+$palette-white-secondary: rgba(240, 240, 240, 1);
+
+$palette-gray-primary:#C0C0C0;
+$palette-gray-secondary:rgba(150, 150, 150, 1);
+
+
+
+

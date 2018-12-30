@@ -1,0 +1,47 @@
+.contents{
+  width:$content-width;
+  height: 100%;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  margin: 0 auto;
+  background-color:$palette-gray-secondary;
+}
+
+.itemList{
+  padding:10px 0 0 0;
+  display:inline-block;
+  @include mq-up() {
+    @include col(4,10px,'.element');
+  }
+  @include mq-down() {
+    @include col(2,10px,'.element');
+  }
+  &__element{
+    @include clearfix();
+    margin:10px 0 0 0;
+    float: left;
+    position:relative;
+    background-color:$palette-white-primary;
+  }
+}
+
+.element{
+  &__itemImage{
+    @include cardstyle();
+    width: 100%;
+    height: 200px;
+    background-size:cover;
+    background-position:center;
+  }
+  &__itemName{
+    margin:10px 0 0 0;
+    display: block;
+  }
+  &__itemLink{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+  }
+}
