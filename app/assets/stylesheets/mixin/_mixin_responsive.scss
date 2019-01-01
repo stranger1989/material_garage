@@ -16,12 +16,16 @@
     @if $is-flex == true {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: start;
 
         $margin-size : #{$column-margin * ($column-count - 1)};
 
         #{$selector} {
             width: calc((100% - #{$margin-size}) / #{$column-count});
+            margin-right: calc(#{$margin-size} / #{$column-count - 1});
+            &:nth-child(#{$column-count}n){
+              margin-right:0;
+            }
             @content;
         }
     } // end Flex

@@ -1,0 +1,19 @@
+= form_for item do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name, autofocus: true, autocomplete: "name"
+  .field
+    = f.label :image_url
+    %br/
+    = f.file_field :image_url, autofocus: true, autocomplete: "image_url"
+  .field
+    = f.label :storage
+    %br/
+    = f.text_field :storage, autofocus: true, autocomplete: "storage"
+  .field
+    = f.label :memo
+    %br/
+    = f.text_field :memo, autofocus: true, autocomplete: "memo"
+  .actions
+    = f.submit "登録"
