@@ -2,4 +2,6 @@
   .element__itemImage{style: "background-image: url('#{ item.image_url.url}') "}
   .element__itemName=item.name
   .element__itemStorage=item.storage
+  =link_to "削除",item_path(item.id), class: "element__itemDelete", method: :delete
+  =link_to "編集",edit_item_path(item.id), class: "element__itemEdit"
   =link_to "",item_path(item.id), class: "element__itemLink"
