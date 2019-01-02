@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MaterialGarage
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .wrapper
+      .DeviseImageWrapper
+        %header.header
+          .logo--devise
+            =link_to 'Material Garage', '/'
+        .contents
+          .form_field
+            = yield
+        %footer.footer
+          ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."

@@ -1,0 +1,60 @@
+.form_field{
+  width:100%;
+  height:calc(100vh * 0.7);
+  margin: auto;
+  padding:20px 20%;
+  position:absolute;
+  left:0; right: 0;
+  top: 0; bottom: 0;
+  overflow: scroll;
+  background-color:$palette-clearblack-primary;
+  color:$palette-white-primary;
+  h2{
+    font-size:$font-size-3;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  a{
+    @include button();
+    margin:10px 0 0 0;
+    display:block;
+    opacity: .5;
+  }
+  input[type="text"], input[type="email"],input[type="password"]{
+    margin:0 0 10px 0;
+    width:100%;
+    height:2rem;
+    padding:0 10px;
+    background-color:$palette-white-secondary;
+    border-radius: 3px;
+  }
+  input[type="checkbox"]{
+    width:1rem;
+    height:1rem;
+    background-color: $palette-white-secondary;
+    border-radius: 3px;
+    position: relative;
+    &:checked{
+      background-color:$palette-black-primary;
+    }
+  }
+  .fileLabel{
+    @include button();
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+  #fileUpload{
+    display:none;
+  }
+  .actions{
+    input{
+      @include button();
+      width:100%;
+      margin:10px 0;
+    }
+  }
+}
+
+
+
+
