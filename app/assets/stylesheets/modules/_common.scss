@@ -6,7 +6,41 @@ html,body{
   height:100%;
 }
 
+
+a {
+  outline: none;
+  color:$palette-black-primary;
+  &:link{
+    text-decoration: none;
+    color: #00F;
+  }
+  &:hover{
+    text-decoration: none;
+    color: #00F;
+  }
+  &:visited{
+    text-decoration: none;
+    color: #00F;
+  }
+  &:active{
+    text-decoration: none;
+    color: #00F;
+  }
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .wrapper{
   width: 100%;
-  min-width: 600px;
+  min-width: 300px;
 }
