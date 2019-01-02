@@ -1,26 +1,44 @@
+.mainImageWrapper{
+  width:100%;
+  background-image: url('material.jpg');
+  background-size:cover;
+  background-position:center;
+  filter: grayscale(50%);
+}
+
+.DeviseImageWrapper{
+  width:100%;
+  background-image: url('main_image.jpg');
+  background-size:cover;
+  background-position:center;
+  filter: grayscale(50%);
+}
+
 .contents{
   width:$content-width;
   height: 100%;
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
   margin: 0 auto;
-  background-color:$palette-gray-secondary;
+  position:relative;
+  a{
+    color:$palette-black-primary;
+  }
 }
 
 .itemList{
-  padding:10px 0 0 0;
   display:inline-block;
   @include mq-up() {
-    @include col(3,10px,'.element');
+    @include col(4,10px,'.element');
   }
   @include mq-down() {
     @include col(2,10px,'.element');
   }
   &__element{
     @include clearfix();
-    margin:10px 0 0 0;
+    margin:40px 0 0 0;
     float: left;
     position:relative;
-    background-color:$palette-white-primary;
+    font-size: $font-size-7;
   }
 }
 
@@ -35,6 +53,19 @@
   &__itemName{
     margin:10px 0 0 0;
     display: block;
+    font-size:$font-size-6;
+  }
+  &__itemStorage{
+    display: block;
+    border-bottom: 1px solid black;
+  }
+  &__itemDelete{
+    @include button($palette-gray-secondary,.6rem,$palette-gray-secondary);
+    margin:5px 0 0 0;
+  }
+  &__itemEdit{
+    @include button($palette-gray-secondary,.6rem,$palette-gray-secondary);
+    margin:5px 0 0 0;
   }
   &__itemLink{
     display: block;
@@ -45,3 +76,44 @@
     width: 100%;
   }
 }
+
+.itemDetail{
+  @include mq-up() {
+    width:50%;
+  }
+  @include mq-down() {
+    width:100%;
+  }
+  padding:50px 0 50px 0;
+  margin:0 auto;
+  &__itemImage{
+    @include cardstyle();
+    height: 400px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+  &__itemName{
+    margin:20px 0 0 0;
+    display: block;
+    border-bottom: 1px solid black;
+  }
+  &__itemStorage{
+    margin:20px 0 0 0;
+    display: block;
+    border-bottom: 1px solid black;
+  }
+  &__itemMemo{
+    margin:20px 0 0 0;
+    display: block;
+    border-bottom: 1px solid black;
+  }
+  &__itemQR{
+    margin:20px 0 0 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
