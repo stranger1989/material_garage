@@ -14,11 +14,19 @@
     margin: 0 0 10px 0;
     text-align: center;
   }
+  h3{
+    font-size:$font-size-3;
+    margin: 10px 0 10px 0;
+    text-align: center;
+  }
   a{
     @include button();
     margin:10px 0 0 0;
     display:block;
     opacity: .5;
+  }
+  i{
+    font-size:$font-size-7;
   }
   input[type="text"], input[type="email"],input[type="password"]{
     margin:0 0 10px 0;
