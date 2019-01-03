@@ -1,7 +1,9 @@
 .footer{
   width: 100%;
   height: $footer-height;
-  background-color:$palette-gray-primary;
+  background-color:$palette-clearblack-primary;
+  color:$palette-white-primary;
+  font-size:$font-size-7;
   text-align: center;
   line-height: $footer-height;
 }

@@ -22,11 +22,12 @@
 }
 
 // ボタンスタイル
-@mixin button($color: #48B1F2, $font-size: 16px, $text-color: #009999) {
+@mixin button($color: #FFF, $font-size: 16px, $text-color: #FFF) {
   display: inline-block;
   position: relative;
   font-weight: bold;
   color: rgba($text-color, .9);
+  border: 1px solid;
   border-color:$text-color;
   border-radius:5px;
   font-size: $font-size;
@@ -37,6 +38,7 @@
   outline: 0;
   &:hover {
     text-decoration: none;
+    background-color:$palette-clearwhite-primary;
     color: $text-color;
     cursor:pointer;
   }

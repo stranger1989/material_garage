@@ -9,20 +9,12 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .wrapper
-      .mainImageWrapper
+      .DeviseImageWrapper
         %header.header
-          .logo
+          .logo--devise
             =link_to 'Material Garage', '/'
-          .serchBox
-            %label{name:"title", placeholder:"検索"}
-            %input{name:"title", placeholder:"検索"}
-          .nemu
-            -if user_signed_in?
-              .nemu__action
-                =link_to 'アイテム追加', new_item_path
-              .nemu__action ユーザー情報
-              .nemu__action
-                =link_to 'ログアウト', destroy_user_session_path, method: :delete
-        = yield
+        .contents
+          .form_field
+            = yield
         %footer.footer
           ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."

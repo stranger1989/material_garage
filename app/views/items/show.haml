@@ -1,7 +1,7 @@
 .contents
-  .itemList__element.element{ data: {id: "#{@item.id}"}}
-    .element__itemImage{style: "background-image: url('#{ @item.image_url.url}') "}
-    .element__itemName=@item.name
-    .element__itemStorage=@item.storage
-    .element__itemMemo=@item.memo
-    =image_tag("https://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=#{url_for(only_path: false)}")
+  .itemDetail{ data: {id: "#{@item.id}"}}
+    .itemDetail__itemImage{style: "background-image: url('#{ @item.image_url.url}') "}
+    .itemDetail__itemName="アイテム名: #{ @item.name }"
+    .itemDetail__itemStorage="保管場所: #{ @item.storage }"
+    .itemDetail__itemMemo="メモ: #{ @item.memo }"
+    .itemDetail__itemQR=image_tag("https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{url_for(only_path: false)}")

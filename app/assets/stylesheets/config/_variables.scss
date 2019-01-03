@@ -29,6 +29,8 @@ $font-size-9:0.2rem;
 // 配色関連設定
 $palette-black-primary:#000;
 // $palette-black-secondary:#000;
+
+$palette-clearblack-primary:rgba(0,0,0,.4);
 // $palette-red-third
 // $palette-red-tertiary
 // $palette-red-quaternary
@@ -38,9 +40,15 @@ $palette-yellow-primary:yellow;
 $palette-white-primary:#FFF;
 $palette-white-secondary: rgba(240, 240, 240, 1);
 
+$palette-clearwhite-primary:rgba(255,255,255,.2);
+
 $palette-gray-primary:#C0C0C0;
 $palette-gray-secondary:rgba(150, 150, 150, 1);
 
-
+@font-face {
+  font-family: 'Perfetto-Regular';
+  font-style: normal;
+  src: font-url('Perfetto-Regular.woff') format('woff');
+}
 
 
