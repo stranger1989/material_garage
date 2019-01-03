@@ -20,12 +20,10 @@
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
   margin: 0 auto;
   position:relative;
-  a{
-    color:$palette-black-primary;
-  }
 }
 
 .itemList{
+  padding:20px 0;
   display:inline-block;
   @include mq-up() {
     @include col(4,10px,'.element');
@@ -33,9 +31,12 @@
   @include mq-down() {
     @include col(2,10px,'.element');
   }
+  a{
+    color:$palette-black-primary;
+  }
   &__element{
     @include clearfix();
-    margin:40px 0 0 0;
+    margin:20px 0 0 0;
     float: left;
     position:relative;
     font-size: $font-size-7;
