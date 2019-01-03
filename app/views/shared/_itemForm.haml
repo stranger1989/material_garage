@@ -1,15 +1,16 @@
 = form_for item do |f|
   .field
-    = f.label :name
+    = f.label :name, "名前"
     = f.text_field :name, autofocus: true, autocomplete: "name"
   .field
     = f.label :image_url,"イメージファイルを選択", for: "fileUpload", class: "fileLabel"
     = f.file_field :image_url, autofocus: true, autocomplete: "image_url", id: "fileUpload"
   .field
-    = f.label :storage
+    = f.label :storage, "保管場所"
     = f.text_field :storage, autofocus: true, autocomplete: "storage"
   .field
-    = f.label :memo
+    = f.label :memo, "メモ"
     = f.text_field :memo, autofocus: true, autocomplete: "memo"
   .actions
     = f.submit "登録"
+= link_to "戻る", :back
