@@ -20,7 +20,8 @@
             -if user_signed_in?
               .nemu__action
                 =link_to 'アイテム追加', new_item_path
-              .nemu__action ユーザー情報
+              .nemu__action
+              =link_to 'ユーザー情報', edit_user_registration_path
               .nemu__action
                 =link_to 'ログアウト', destroy_user_session_path, method: :delete
         = yield
