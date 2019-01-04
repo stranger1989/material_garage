@@ -7,9 +7,18 @@
     = csp_meta_tag
     %meta{ name: 'viewport', content: "width=device-width, initial-scale=1.0" }
 
+    %link{ rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css" }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .preload_image
+    .modalWindow
+      .mobileMenu
+        %label{name:"title"}
+        %input{name:"title", placeholder:"検索"}
+        =link_to 'アイテム追加', new_item_path
+        =link_to 'ユーザー情報', edit_user_registration_path
+        =button_to 'ログアウト', destroy_user_session_path, method: :delete
     .wrapper
       .mainImageWrapper
         %header.header
@@ -20,10 +29,13 @@
             %input{name:"title", placeholder:"検索"}
           .nemu
             -if user_signed_in?
+              .nemu__humburgerMenu
+                = link_to "#" do
+                  %i.fa.fa-bars
               .nemu__action
                 =link_to 'アイテム追加', new_item_path
               .nemu__action
-              =link_to 'ユーザー情報', edit_user_registration_path
+                =link_to 'ユーザー情報', edit_user_registration_path
               .nemu__action
                 =link_to 'ログアウト', destroy_user_session_path, method: :delete
         = yield
