@@ -14,8 +14,9 @@
     = f.password_field :password, autocomplete: "current-password"
   - if devise_mapping.rememberable?
     .field
-      = f.check_box :remember_me
-      = f.label :remember_me, "ユーザー情報を記録"
+      %label
+        = f.check_box :remember_me, class: "checkbox-input"
+        %span.checkbox-parts ユーザー情報を記録
   .actions
     = f.submit "ログイン"
 = render "devise/shared/links"
