@@ -52,13 +52,13 @@
     background-position:center;
   }
   &__itemName{
-    margin:10px 0 0 0;
     display: block;
     font-size:$font-size-6;
+    line-height: 2.2rem;
   }
   &__itemStorage{
     display: block;
-    border-bottom: 1px solid black;
+    line-height: 1rem;
   }
   &__itemDelete{
     @include button($palette-gray-secondary,.6rem,$palette-gray-secondary);
