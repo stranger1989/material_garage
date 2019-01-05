@@ -21,7 +21,7 @@ $(function(){
                 </div>`
     search_list.append(html);
   }
-
+  // PCの設定
   $(".searchInput").on("keyup", function() {
     var input = $(".searchInput").val();
     $.ajax({
@@ -45,7 +45,7 @@ $(function(){
     alert('アイテム検索に失敗しました');
   })
   });
-
+  // モバイルの設定
   $(".searchInputSide").on("keyup", function() {
     var input = $(".searchInputSide").val();
     $.ajax({

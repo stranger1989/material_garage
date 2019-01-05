@@ -2,4 +2,5 @@
   .itemList
     - @items.each do |item|
       = render partial: 'shared/item', locals: { item: item }
-  = paginate(@items)
+  .loadingBox
+    .loadingImageScroll
