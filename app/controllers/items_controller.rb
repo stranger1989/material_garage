@@ -3,7 +3,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
-    @items = Item.where("user_id = ?",current_user.id).page(params[:page]).per(12)
+    @items = Item.where("user_id = ? and name LIKE(?)",current_user.id, "%#{params[:keyword]}%").page(params[:page]).per(12)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def show
