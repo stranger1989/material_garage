@@ -45,11 +45,15 @@
 
 .nemu{
   float:right;
+  margin:0 20px 0 0;
   &__humburgerMenu{
-    padding:0 50px 0 5px;
+    padding:0 20px 0 5px;
     float:right;
     display: inline-block;
     font-size:$font-size-5;
+    a{
+      color:$palette-black-primary;
+    }
     @include mq-up() {
       display:none;
     }
@@ -58,14 +62,21 @@
     }
   }
   &__action{
-    padding:0 5px;
+    padding:0 10px;
     float:right;
     display: inline-block;
+    &:hover{
+      line-height:calc(#{$header-height} - 2px);
+      border-bottom:2px solid $palette-black-primary;
+    }
     @include mq-up() {
       display:block;
     }
     @include mq-down() {
       display:none;
+    }
+    a{
+      color:$palette-black-primary;
     }
   }
 }

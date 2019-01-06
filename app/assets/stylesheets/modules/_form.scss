@@ -1,8 +1,13 @@
 .form_field{
+  @include mq-up() {
+    padding:50px 25%;
+  }
+  @include mq-down() {
+    padding:50px 5%;
+  }
   width:100%;
   min-height:calc(100vh - #{$header-height} - #{$footer-height} - 100px);
   margin: 70px auto;
-  padding:50px 20%;
   background-color:$palette-clearblack-primary;
   color:$palette-white-primary;
   h2{
@@ -20,6 +25,7 @@
     margin:10px 0 0 0;
     display:block;
     opacity: .5;
+    font-size:$font-size-7;
   }
   i{
     font-size:$font-size-7;
