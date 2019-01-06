@@ -60,12 +60,12 @@
     line-height: 1rem;
   }
   &__itemDelete{
-    @include button($palette-gray-secondary,.6rem,$palette-gray-secondary);
+    @include button-tag(#ccc);
     margin:5px 0 0 0;
   }
   &__itemEdit{
-    @include button($palette-gray-secondary,.6rem,$palette-gray-secondary);
-    margin:5px 0 0 0;
+    @include button-tag(#ccc);
+    margin:5px 0 0 5px;
   }
   &__itemLink{
     display: block;
