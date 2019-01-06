@@ -1,12 +1,8 @@
 .form_field{
   width:100%;
-  height:calc(100vh * 0.7);
-  margin: auto;
-  padding:20px 20%;
-  position:absolute;
-  left:0; right: 0;
-  top: 0; bottom: 0;
-  overflow: scroll;
+  min-height:calc(100vh - #{$header-height} - #{$footer-height} - 100px);
+  margin: 70px auto;
+  padding:50px 20%;
   background-color:$palette-clearblack-primary;
   color:$palette-white-primary;
   h2{
@@ -77,6 +73,7 @@
     @include button();
     width: 100%;
     margin: 0 0 5px 0;
+    border: 2px dashed #b4bcc2;
   }
   #fileUpload{
     display:none;
@@ -87,6 +84,10 @@
       width:100%;
       margin:10px 0;
     }
+  }
+  #img_prev{
+    width:100%;
+    margin:10px 0;
   }
 }
 
