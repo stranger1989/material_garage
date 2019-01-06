@@ -5,6 +5,7 @@
   .field
     = f.label :image_url,"イメージファイルを選択", for: "fileUpload", class: "fileLabel"
     = f.file_field :image_url, autofocus: true, autocomplete: "image_url", id: "fileUpload"
+    = image_tag item.image_url.url, id: "img_prev" if item.image_url?
   .field
     = f.label :storage, "保管場所"
     = f.text_field :storage, autofocus: true, autocomplete: "storage"
