@@ -12,6 +12,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .preload_image
+    .mainImageWrapper
     .modalWindow
       .mobileMenu
         %label{name:"title"}
@@ -20,24 +21,23 @@
         =link_to 'ユーザー情報', edit_user_registration_path
         =button_to 'ログアウト', destroy_user_session_path, method: :delete
     .wrapper
-      .mainImageWrapper
-        %header.header
-          .logo
-            =link_to 'Material Garage', '/'
-          .serchBox
-            %label{name:"title"}
-            %input{name:"title", placeholder:"検索", class: "searchInput"}
-          .nemu
-            -if user_signed_in?
-              .nemu__humburgerMenu
-                = link_to "#" do
-                  %i.fa.fa-bars
-              .nemu__action
-                =link_to 'アイテム追加', new_item_path
-              .nemu__action
-                =link_to 'ユーザー情報', edit_user_registration_path
-              .nemu__action
-                =link_to 'ログアウト', destroy_user_session_path, method: :delete
-        = yield
-        %footer.footer
-          ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."
+      %header.header
+        .logo
+          =link_to 'Material Garage', '/'
+        .serchBox
+          %label{name:"title"}
+          %input{name:"title", placeholder:"検索", class: "searchInput"}
+        .nemu
+          -if user_signed_in?
+            .nemu__humburgerMenu
+              = link_to "#" do
+                %i.fa.fa-bars
+            .nemu__action
+              =link_to 'アイテム追加', new_item_path
+            .nemu__action
+              =link_to 'ユーザー情報', edit_user_registration_path
+            .nemu__action
+              =link_to 'ログアウト', destroy_user_session_path, method: :delete
+      = yield
+      %footer.footer
+        ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."

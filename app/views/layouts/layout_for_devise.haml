@@ -11,14 +11,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .preload_image
+    .DeviseImageWrapper
     .wrapper
-      .DeviseImageWrapper
-        %header.header
-          .logo--devise
-            =link_to 'Material Garage', '/'
-            %p サンプル・素材の管理を簡単に
-        .contents
-          .form_field
-            = yield
-        %footer.footer
-          ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."
+      %header.header
+        .logo--devise
+          =link_to 'Material Garage', '/'
+          %p サンプル・素材の管理を簡単に
+      .contents
+        .form_field
+          = yield
+      %footer.footer
+        ="© 2018 - #{Time.now.year} Material Garage ALL RIGHTS RESERVED."

@@ -1,6 +1,8 @@
 .footer{
   width: 100%;
   height: $footer-height;
+  position:relative;
+  z-index:2;
   background-color:$palette-clearblack-primary;
   color:$palette-white-primary;
   font-size:$font-size-7;

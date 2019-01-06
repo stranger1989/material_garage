@@ -1,5 +1,8 @@
 .mainImageWrapper{
-  width:100%;
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  z-index: 0;
   background-image: url('material.jpg');
   background-size:cover;
   background-position:center;
@@ -7,7 +10,10 @@
 }
 
 .DeviseImageWrapper{
-  width:100%;
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  z-index: 0;
   background-image: url('main_image.jpg');
   background-size:cover;
   background-position:center;
