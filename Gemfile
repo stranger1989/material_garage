@@ -72,6 +72,7 @@ gem 'kaminari'
 gem 'jquery-rails'
 gem 'rqrcode'
 gem 'dropzonejs-rails'
+gem 'fog'
 
 
 
